@@ -238,7 +238,7 @@ const App: React.FC = () => {
             >
               <div className="max-w-7xl mx-auto px-4 sm:px-8">
                 <h2 className="text-xl sm:text-2xl font-light tracking-widest">{t.hero_welcome}</h2>
-                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-wider mt-4 whitespace-nowrap">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-wider mt-4">
                   {t.hero_title}
                 </h1>
               </div>
