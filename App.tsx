@@ -198,7 +198,7 @@ const App: React.FC = () => {
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
 
-  const backgroundImageUrl = 'https://drive.google.com/uc?export=view&id=1aWxsrc2-qXAdllIXrFeOWvQhvhwIhDeG';
+  const backgroundImageUrl = 'https://raw.githubusercontent.com/Melena1987/FundacionFeliz.com/main/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg';
 
   return (
     <div className="relative min-h-screen w-full text-white overflow-y-auto">
