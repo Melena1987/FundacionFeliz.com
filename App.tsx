@@ -132,7 +132,7 @@ const translations = {
     privacy_data_use_title: '2. Utilisation des Données',
     privacy_data_use_p1: 'Nous utilisons vos données pour répondre à vos demandes et vous fournir des informations sur notre fondation.',
     privacy_data_protection_title: '3. Protection des Données',
-    privacy_data_protection_p1: 'Nous nous engageons à protéger vos données et ne les partagerons pas avec des tiers sans votre consentement.',
+    privacy_data_protection_p1: 'Nous nous engageons à proteger vos données et ne les partagerons pas avec des tiers sans votre consentement.',
     cookies_title: 'Politique de Cookies',
     cookies_use_title: '1. Utilisation des Cookies',
     cookies_use_p1: 'Ce site web utilise des cookies pour améliorer l\'expérience utilisateur et fournir des fonctionnalités supplémentaires.',
@@ -198,7 +198,7 @@ const App: React.FC = () => {
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
 
-  const backgroundImageUrl = 'https://raw.githubusercontent.com/Melena1987/FundacionFeliz.com/main/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg';
+  const backgroundImageUrl = '/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg';
 
   return (
     <div className="relative min-h-screen w-full text-white overflow-y-auto">
