@@ -198,7 +198,7 @@ const App: React.FC = () => {
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
 
-  const backgroundImageUrl = 'https://www.fundacionfeliz.com/images/home.jpg';
+  const backgroundImageUrl = 'https://drive.google.com/uc?export=view&id=1aWxsrc2-qXAdllIXrFeOWvQhvhwIhDeG';
 
   return (
     <div className="relative min-h-screen w-full text-white overflow-y-auto">
