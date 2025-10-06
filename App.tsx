@@ -212,9 +212,9 @@ const App: React.FC = () => {
       <div className="fixed inset-0 z-[-1] bg-black/20" />
 
       {/* Main Content */}
-      <div className="relative z-10 flex flex-col items-center w-full min-h-screen px-4 sm:px-8 py-8">
+      <div className="relative z-10 flex flex-col items-center w-full min-h-screen">
         {/* Header */}
-        <header className="w-full max-w-7xl mx-auto flex justify-between items-center py-4">
+        <header className="w-full max-w-7xl mx-auto flex justify-between items-center py-6 px-4 sm:px-8">
           <button
             onClick={() => setPage('home')}
             disabled={page === 'home'}
@@ -230,61 +230,67 @@ const App: React.FC = () => {
         </header>
 
         {page === 'home' ? (
-          <main className="flex-grow flex flex-col items-center justify-center w-full max-w-5xl mx-auto space-y-20 py-16 text-center">
-            {/* Hero Title */}
-            <div className="flex flex-col items-center text-shadow">
-              <h2 className="text-xl sm:text-2xl font-light tracking-widest">{t.hero_welcome}</h2>
-              <h1 className="text-6xl sm:text-8xl md:text-9xl font-bold tracking-wide mt-2">
-                {t.hero_title}
-              </h1>
-            </div>
-            
-            {/* Content Cards */}
-            <div className="w-full flex flex-col items-center space-y-20">
-              {/* About Card */}
-              <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 text-left border border-white/20 shadow-xl">
-                <h3 className="text-2xl font-semibold mb-4 text-shadow">{t.about_title}</h3>
-                <p className="text-base leading-relaxed mb-6">
-                  {t.about_p1}
-                </p>
-                <p className="text-base leading-relaxed mb-6">
-                  {t.about_p2}
-                </p>
-                <ul className="list-disc list-inside space-y-2 text-base">
-                  <li>{t.about_li1}</li>
-                  <li>{t.about_li2}</li>
-                  <li>{t.about_li3}</li>
-                  <li>{t.about_li4}</li>
-                  <li>{t.about_li5}</li>
-                  <li>{t.about_li6}</li>
-                  <li>{t.about_li7}</li>
-                </ul>
+           <main className="flex-grow flex flex-col items-center w-full">
+            {/* Hero Section */}
+            <section 
+              className="w-full min-h-screen flex flex-col items-center justify-center text-center text-shadow"
+            >
+              <div className="max-w-7xl mx-auto px-4 sm:px-8">
+                <h2 className="text-xl sm:text-2xl font-light tracking-widest">{t.hero_welcome}</h2>
+                <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-wider mt-4 whitespace-nowrap">
+                  {t.hero_title}
+                </h1>
               </div>
+            </section>
+            
+            {/* Content Cards Section */}
+            <section className="w-full flex flex-col items-center py-20 px-4 sm:px-8">
+              <div className="w-full max-w-4xl space-y-24">
+                {/* About Card */}
+                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 text-left border border-white/20 shadow-xl">
+                  <h3 className="text-2xl font-semibold mb-4 text-shadow">{t.about_title}</h3>
+                  <p className="text-base leading-relaxed mb-6">
+                    {t.about_p1}
+                  </p>
+                  <p className="text-base leading-relaxed mb-6">
+                    {t.about_p2}
+                  </p>
+                  <ul className="list-disc list-inside space-y-2 text-base">
+                    <li>{t.about_li1}</li>
+                    <li>{t.about_li2}</li>
+                    <li>{t.about_li3}</li>
+                    <li>{t.about_li4}</li>
+                    <li>{t.about_li5}</li>
+                    <li>{t.about_li6}</li>
+                    <li>{t.about_li7}</li>
+                  </ul>
+                </div>
 
-              {/* Contact Card */}
-              <div className="w-full max-w-4xl bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 text-left border border-white/20 shadow-xl">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-shadow">{t.contact_email_title}</h4>
-                    <p>office@fundacionfeliz.com</p>
-                  </div>
-                  <div>
-                    <h4 className="text-xl font-semibold mb-2 text-shadow">{t.contact_address_title}</h4>
-                    <p>{t.contact_address_l1}</p>
-                    <p>{t.contact_address_l2}</p>
-                    <p>{t.contact_address_l3}</p>
-                    <p>{t.contact_address_l4}</p>
+                {/* Contact Card */}
+                <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 sm:p-12 text-left border border-white/20 shadow-xl">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-shadow">{t.contact_email_title}</h4>
+                      <p>office@fundacionfeliz.com</p>
+                    </div>
+                    <div>
+                      <h4 className="text-xl font-semibold mb-2 text-shadow">{t.contact_address_title}</h4>
+                      <p>{t.contact_address_l1}</p>
+                      <p>{t.contact_address_l2}</p>
+                      <p>{t.contact_address_l3}</p>
+                      <p>{t.contact_address_l4}</p>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
           </main>
         ) : (
           <LegalPage translations={t} />
         )}
         
         {/* Footer */}
-        <footer className="w-full max-w-7xl mx-auto text-center py-6 text-sm text-gray-200">
+        <footer className="w-full max-w-7xl mx-auto text-center py-6 text-sm text-gray-200 px-4 sm:px-8">
            <button 
              onClick={() => setPage('legal')}
              disabled={page === 'legal'}
