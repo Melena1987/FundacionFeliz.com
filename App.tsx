@@ -198,15 +198,9 @@ const App: React.FC = () => {
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
 
-  const backgroundImageUrl = '/beautiful-aerial-shot-fronalpstock-mountains-switzerland-beautiful-pink-blue-sky.jpg';
-
   return (
     <div className="relative min-h-screen w-full text-white overflow-y-auto">
-      {/* Background Image */}
-      <div
-        className="fixed inset-0 z-[-1] bg-cover bg-center"
-        style={{ backgroundImage: `url(${backgroundImageUrl})` }}
-      />
+      {/* Background Image is now handled by CSS on the body tag */}
       
       {/* Overlay to darken the image slightly for better text contrast */}
       <div className="fixed inset-0 z-[-1] bg-black/20" />
