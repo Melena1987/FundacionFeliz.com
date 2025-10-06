@@ -198,6 +198,14 @@ const App: React.FC = () => {
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
 
+  const handleHomeClick = () => {
+    if (page === 'home') {
+      window.location.reload();
+    } else {
+      setPage('home');
+    }
+  };
+
   return (
     <div className="relative min-h-screen w-full text-white overflow-y-auto">
       {/* Background Image is now handled by CSS on the body tag */}
@@ -210,13 +218,8 @@ const App: React.FC = () => {
         {/* Header */}
         <header className="w-full max-w-7xl mx-auto flex justify-between items-center py-6 px-4 sm:px-8">
           <button
-            onClick={() => setPage('home')}
-            disabled={page === 'home'}
-            className={`text-lg font-medium text-shadow transition-opacity ${
-              page === 'home'
-                ? 'opacity-50 cursor-not-allowed'
-                : 'hover:opacity-80'
-            }`}
+            onClick={handleHomeClick}
+            className="text-lg font-medium text-shadow transition-opacity hover:opacity-80"
           >
             {t.nav_home}
           </button>
