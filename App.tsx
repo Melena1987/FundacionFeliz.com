@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import LanguageSwitcher from './components/LanguageSwitcher';
 import LegalPage from './components/LegalPage';
 
@@ -197,6 +197,10 @@ const App: React.FC = () => {
   const [language, setLanguage] = useState<Language>('es');
   const [page, setPage] = useState<'home' | 'legal'>('home');
   const t = translations[language];
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [page]);
 
   const handleHomeClick = () => {
     if (page === 'home') {
